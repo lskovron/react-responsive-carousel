@@ -4,7 +4,7 @@ import { CarouselProps, CarouselState } from './types';
 export default class Carousel extends React.Component<CarouselProps, CarouselState> {
     private thumbsRef?;
     private carouselWrapperRef?;
-    private listRef?;
+    private itemWrapperRef?;
     private itemsRef?;
     private timer?;
     private animationHandler;
@@ -16,7 +16,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     componentWillUnmount(): void;
     setThumbsRef: (node: Thumbs) => void;
     setCarouselWrapperRef: (node: HTMLDivElement) => void;
-    setListRef: (node: HTMLElement | HTMLUListElement) => void;
+    setItemWrapperRef: (node: HTMLElement | HTMLDivElement) => void;
     setItemsRef: (node: HTMLElement, index: number) => void;
     setupCarousel(): void;
     destroyCarousel(): void;
